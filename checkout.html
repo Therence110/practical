@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout – CamRent</title>
+  <link rel="stylesheet" href="cam.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Checkout</h1>
+      <p>Fill out your details to complete booking</p>
+    </header>
+
+    <main>
+      <section id="summary" class="section">
+        <h2>Booking Summary</h2>
+        <p id="item"></p>
+        <p id="days"></p>
+        <p id="price"></p>
+        <p id="total"></p>
+      </section>
+
+      <section id="form" class="section">
+        <h2>Your Details</h2>
+        <form onsubmit="finishBooking(event)">
+          <label>Name: <input type="text" id="name" required></label><br>
+          <label>Email: <input type="email" id="email" required></label><br>
+          <label>Phone: <input type="tel" id="phone" required></label><br>
+          <button type="submit">Confirm Booking</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("item").textContent = "Item: " + params.get("item");
+    document.getElementById("days").textContent = "Days: " + params.get("days");
+    document.getElementById("price").textContent = "Price per day: $" + params.get("price");
+    document.getElementById("total").textContent = "Total: $" + params.get("total");
+
+    function finishBooking(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+
+      alert(`Booking confirmed!\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\n${document.getElementById("item").textContent}\n${document.getElementById("days").textContent}\n${document.getElementById("total").textContent}`);
+
+      window.location.href = "index.html"; // Redirect back to home
+    }
+  </script>
+</body>
+</html>

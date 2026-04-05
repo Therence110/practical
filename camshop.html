@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CamRent – Rent Cameras</title>
+    <link rel="stylesheet" href="cam.css">
+</head>
+<body>
+
+<div class="container">
+
+       <header>
+        <h1>CamRent</h1>
+        <p>Rent the Best Cameras for Your Projects</p>
+    </header>
+
+    <!-- SIDEBAR MENU -->
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#rentals">Rent Cameras</a></li>
+            <li><a href="#lenses">Lenses</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    
+    <main>
+
+              <section id="home" class="section">
+            <h2>Welcome to CamRent</h2>
+            <p>We provide the best cameras and photography gear for your creative projects. Scroll down to explore our rentals!</p>
+            <img src="banner.jpg" alt="Camera Banner">
+        </section>
+	<section id="cart" class="section">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Total: $0</p>
+    <button onclick="checkout()">Checkout</button>
+</section>
+
+
+               <section id="rentals" class="section">
+            <h2>Available Cameras</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="fuji.png" alt="Fujifilm finepix x100">
+                    <p>Fujifilm finepix x100 – $50/day</p>
+                    <button onclick="openModal('Fujifilm finepix x100', 50)">Book Now</button>
+                </div>
+                <div class="card">
+                    <img src="ff.jpg" alt="Fujiilm Instax Mini Evo 12">
+                    <p>Fujifilm Instax Mini Evo 12 – $30/day</p>
+                    <button onclick="openModal('Fujiilm Instax Mini Evo 12', 30)">Book Now</button>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Sony A7 III">
+                    <p>Sony A7 III – $45/day</p>
+                    <button onclick="openModal('Sony A7 III', 45)">Book Now</button>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Fujifilm X-T4">
+                    <p>Fujifilm X-T4 – $40/day</p>
+                    <button onclick="openModal('Fujifilm X-T4', 40)">Book Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- LENSES SECTION -->
+        <section id="lenses" class="section">
+            <h2>Lenses for Rent</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="50mm Lens">
+                    <p>50mm Lens – $10/day</p>
+                    <button onclick="openModal('50mm Lens', 10)">Book Now</button>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Wide Angle Lens">
+                    <p>Wide Angle Lens – $15/day</p>
+                    <button onclick="openModal('Wide Angle Lens', 15)">Book Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PACKAGES SECTION -->
+        <section id="packages" class="section">
+            <h2>Photography Packages</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Basic Package">
+                    <p>Basic Package – Camera + Lens – $60/day</p>
+                    <button onclick="openModal('Basic Package', 60)">Book Now</button>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Pro Package">
+                    <p>Pro Package – Camera + Lens + Tripod – $80/day</p>
+                    <button onclick="openModal('Pro Package', 80)">Book Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p>Email: info@camrent.com</p>
+            <p>Phone: +676 767 676</p>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 CamRent – All Rights Reserved</p>
+    </footer>
+
+</div>
+
+<button onclick="window.location.href='booking.html?item=Fujifilm%20finepix%20x100&price=50'">Book Now</button>
+<button onclick="window.location.href='booking.html?item=Fujifilm%20Instax%20Mini%20Evo%2012&price=30'">Book Now</button>
+<button onclick="window.location.href='booking.html?item=Sony%20A7%20III&price=45'">Book Now</button>
+<button onclick="window.location.href='booking.html?item=Fujifilm%20X-T4&price=40'">Book Now</button>
+</div>
+
+</body>
+</html>
